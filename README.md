@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EZ-SaaS: Build Your SaaS in 12 Hours
 
-## Getting Started
+A complete Next.js template that helps you build and launch your SaaS product in just 12 hours. This template includes everything you need to get started, from authentication to payments, with a beautiful UI and comprehensive documentation.
 
-First, run the development server:
+## 🚀 Features
 
+- **Complete Authentication System**
+  - Supabase integration
+  - Google OAuth support
+  - User profiles and management
+
+- **Payment Integration**
+  - Stripe integration
+  - One-time payment support
+  - Subscription management
+
+- **Modern Tech Stack**
+  - Next.js 14 with App Router
+  - TypeScript for type safety
+  - Tailwind CSS for styling
+  - Shadcn UI components
+
+- **Production Ready**
+  - Responsive design
+  - Dark mode support
+  - SEO optimized
+  - Performance focused
+
+## 🛠️ Getting Started
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/virocodes/quik.git [your-saas-name]
+cd [your-saas-name]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up your environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+Visit [http://localhost:3000](http://localhost:3000) to see your application.
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Detailed documentation is coming soon! The documentation will include:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Complete setup guide
+- Authentication configuration
+- Payment integration
+- Customization guide
+- Deployment instructions
+- Best practices
 
-## Deploy on Vercel
+For now, you can find basic setup instructions in the dashboard after purchasing the template.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💰 Pricing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- One-time payment of $50
+- Lifetime updates
+- No subscription required
+- Money-back guarantee
+
+## 🤝 Support
+
+If you need help or have questions:
+
+- Open an issue on GitHub
+- Join our Discord community (coming soon)
+- Email support (coming soon)
+
