@@ -39,13 +39,13 @@ export function SignInModal({ open, onOpenChange }: SignInModalProps) {
       <DialogContent className="sm:max-w-md p-0 border-slate-200 shadow-sm">
         <div className="p-8">
           <DialogHeader className="sr-only">
-            <DialogTitle>Sign In to foundrs</DialogTitle>
+            <DialogTitle>Sign In to founderspy</DialogTitle>
           </DialogHeader>
           <div className="text-center space-y-6">
             <div className="space-y-3">
               <Badge variant="secondary">Welcome Back</Badge>
               <h2 className="text-2xl font-semibold text-slate-900">
-                Sign In to foundrs
+                Sign In to founderspy
               </h2>
               <p className="text-sm text-slate-600">
                 Welcome back! Sign in to continue accessing the founders directory

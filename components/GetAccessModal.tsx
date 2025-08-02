@@ -38,13 +38,13 @@ export function GetAccessModal({ open, onOpenChange }: GetAccessModalProps) {
       <DialogContent className="sm:max-w-md p-0 border-slate-200 shadow-sm">
         <div className="p-8">
           <DialogHeader className="sr-only">
-            <DialogTitle>Get Access to foundrs</DialogTitle>
+            <DialogTitle>Get Access to founderspy</DialogTitle>
           </DialogHeader>
           <div className="text-center space-y-6">
             <div className="space-y-3">
               <Badge variant="secondary">Successful Founders</Badge>
               <h2 className="text-2xl font-semibold text-slate-900">
-                Get Access to foundrs
+                Get Access to founderspy
               </h2>
               <p className="text-sm text-slate-600">
                 Join thousands of founders and investors accessing the complete founders directory
