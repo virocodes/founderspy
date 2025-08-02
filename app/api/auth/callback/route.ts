@@ -10,7 +10,25 @@ export async function GET(req: NextRequest) {
   if (code) {
     const supabase = await createClient();
     await supabase.auth.exchangeCodeForSession(code);
+    
+    // Get the user after authentication
+    const { data: { user } } = await supabase.auth.getUser();
+    
+    if (user) {
+      // Check if user already has access
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("has_access")
+        .eq("id", user.id)
+        .single();
+      
+      // If user already has access, redirect to home page
+      if (profile?.has_access) {
+        return NextResponse.redirect(requestUrl.origin + "/");
+      }
+    }
   }
 
-  return NextResponse.redirect(requestUrl.origin + "/dashboard");
+  // Redirect to checkout if user doesn't have access
+  return NextResponse.redirect(requestUrl.origin + "/checkout");
 } 
