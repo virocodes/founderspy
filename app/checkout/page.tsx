@@ -12,7 +12,7 @@ export default function CheckoutPage() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
-            successUrl: window.location.origin + "/",
+            successUrl: window.location.origin + "/?payment=success",
             cancelUrl: window.location.origin + "/",
             mode: "payment"
           }),

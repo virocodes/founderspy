@@ -38,6 +38,37 @@ export default function Landing() {
     loadUserData()
   }, [])
 
+  // Check for payment success and refresh access status
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const paymentStatus = urlParams.get('payment')
+    
+    if (paymentStatus === 'success') {
+      // Remove the payment parameter from URL
+      const newUrl = window.location.pathname
+      window.history.replaceState({}, '', newUrl)
+      
+      // Refresh user data to check for updated access with retry mechanism
+      const refreshUserData = async (retryCount = 0) => {
+        const { user, hasAccess } = await getUserAndAccess()
+        setUser(user)
+        setHasAccess(hasAccess)
+        
+        // If user still doesn't have access and we haven't retried too many times, try again
+        if (!hasAccess && retryCount < 3) {
+          setTimeout(() => {
+            refreshUserData(retryCount + 1)
+          }, 2000) // Wait 2 seconds before retrying
+        }
+      }
+      
+      // Add a small delay to allow webhook to process
+      setTimeout(() => {
+        refreshUserData()
+      }, 1000)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
