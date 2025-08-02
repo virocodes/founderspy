@@ -29,7 +29,7 @@ export const createCheckout = async ({
 }: CreateCheckoutParams): Promise<string> => {
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-      apiVersion: "2025-05-28.basil", 
+      apiVersion: "2025-07-30.basil", 
       typescript: true,
     });
 
@@ -93,7 +93,7 @@ export const createCustomerPortal = async ({
   returnUrl,
 }: CreateCustomerPortalParams): Promise<string> => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-    apiVersion: "2025-05-28.basil", 
+    apiVersion: "2025-07-30.basil", 
     typescript: true,
   });
 
@@ -108,7 +108,7 @@ export const createCustomerPortal = async ({
 export const findCheckoutSession = async (sessionId: string) => {
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-      apiVersion: "2025-05-28.basil",
+      apiVersion: "2025-07-30.basil",
       typescript: true,
     });
 
