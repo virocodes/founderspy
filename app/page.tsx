@@ -54,7 +54,7 @@ export default function Landing() {
             Meet the Founders
                 </h1>
           <p className="text-lg text-slate-600 mb-6 max-w-2xl">
-            Discover the brilliant minds behind successful companies. Connect with founders who have built, scaled, and transformed industries.
+            Discover the brilliant minds behind successful companies. Search founders by school, company, or name.
           </p>
         </div>
         

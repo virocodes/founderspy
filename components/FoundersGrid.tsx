@@ -163,7 +163,7 @@ export function FoundersGrid({ user, hasAccess, onGetAccessRequest }: FoundersGr
                   <SearchBar 
                     onSearch={setSearchQuery}
                     onClear={() => setSearchQuery("")}
-                    placeholder="Search founders by school, company, or name... (use + for multiple terms)"
+                    placeholder='Try searching "berkeley + apple"'
                     disabled={false}
                   />
                 ) : (
@@ -174,7 +174,7 @@ export function FoundersGrid({ user, hasAccess, onGetAccessRequest }: FoundersGr
                   onSearch={setSearchQuery}
                   onClear={() => setSearchQuery("")}
                   onGetAccessRequest={handleGetAccess}
-                  placeholder="Search founders by school, company, or name... (use + for multiple terms)"
+                  placeholder='Try searching "berkeley + apple"'
                 />
               )}
             </div>

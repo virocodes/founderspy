@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Mail } from "lucide-react";
 
@@ -11,9 +10,6 @@ interface ContactModalProps {
 }
 
 export function ContactModal({ open, onOpenChange }: ContactModalProps) {
-  const handleEmailClick = () => {
-    window.open('mailto:dbellan1291@gmail.com?subject=Interested in Founders Data', '_blank');
-  };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -33,14 +29,10 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
             </div>
             
             <div className="space-y-4">
-              <Button
-                variant="outline"
-                className="w-full h-12 border-slate-300 hover:bg-slate-50"
-                onClick={handleEmailClick}
-              >
+              <div className="flex items-center justify-center">
                 <Mail className="h-5 w-5 mr-2" />
                 dbellan1291@gmail.com
-              </Button>
+              </div>
               
               {/* You can add more contact links here */}
               {/* <Button
