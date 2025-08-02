@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { createClient } from "@/libs/supabase/client";
-import { useState } from "react";
 
 interface UserAvatarDropdownProps {
   user: User | null;
@@ -11,26 +10,10 @@ interface UserAvatarDropdownProps {
 
 export function UserAvatarDropdown({ user }: UserAvatarDropdownProps) {
   const supabase = createClient();
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
     window.location.href = "/";
-  };
-
-  const handleBilling = async () => {
-    setIsLoading(true);
-    try {
-      const { url } = await fetch("/api/stripe/create-portal", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ returnUrl: window.location.href }),
-      }).then(res => res.json());
-      window.location.href = url;
-    } catch (e) {
-      console.error(e);
-    }
-    setIsLoading(false);
   };
 
   return (
@@ -64,25 +47,6 @@ export function UserAvatarDropdown({ user }: UserAvatarDropdownProps) {
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={handleBilling} disabled={isLoading}>
-          {isLoading ? (
-            <span className="loading loading-spinner loading-xs mr-2" />
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="mr-2 h-4 w-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
-          )}
-          Billing
-        </DropdownMenuItem>
         <DropdownMenuItem onClick={handleSignOut}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
