@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { User } from "@supabase/supabase-js"
-import { Badge } from "@/components/ui/badge"
 import { FoundersGrid } from "@/components/FoundersGrid"
 import { DashboardNav } from "@/components/DashboardNav"
 import { SignInModal } from "@/components/SignInModal"

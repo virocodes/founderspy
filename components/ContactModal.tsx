@@ -3,7 +3,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail } from "lucide-react";
 
 interface ContactModalProps {
   open: boolean;
