@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "founderspy",
   description: "search through every yc founder",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
